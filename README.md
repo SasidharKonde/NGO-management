@@ -11,4 +11,7 @@ This project uses HTML, CSS, flask-python and SQL server . This project manages 
 **Inside Statistics Page**
 ![image](https://user-images.githubusercontent.com/64746892/151652073-f4e9658c-9cf3-4969-997a-f4c4a530ca2a.png)
 
+**Inside machine learning Page**
+![image](https://user-images.githubusercontent.com/64746892/160345880-9884f0e2-b59b-4f95-831d-34c26048270e.png)
 
+We added machine learning page to predict expenses of orphanage based on strength of children in orphanage
