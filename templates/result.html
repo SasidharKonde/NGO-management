@@ -1,0 +1,33 @@
+<head>
+    <title>
+        Machine Learning Project
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static\css\layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+    <link rel="icon" type = "image/png" sizes = "16x16" href="{{url_for('static', filename = 'naruto_leaf.png')}}" />
+</head>
+<body>
+    <div class="sidenav">
+        <h1 id = "dumbapp">
+            DumbApp
+        </h1>
+        <div class = "sidenavhead">
+            <p id = "sidenavfirst">DATASCIENCE </p>
+        </div>
+        <a href="/">Home</a>
+        <a href="/create">Create Model</a>
+        <a href="/selectpredict">Predict Result</a>
+    </div>
+    <div class = "content">
+        <div>
+            DumbApp
+        </div>
+       <p>{{message}}</p>
+    </div>
+    
+</body>

@@ -1,0 +1,65 @@
+<head>
+    <title>
+        End semester Prediction
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static\css\layout.css">
+    <link rel="stylesheet" href="static\css\predict.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+    <link rel="icon" type = "image/png" sizes = "16x16" href="{{url_for('static', filename = 'naruto_leaf.png')}}" />
+
+</head>
+<body>
+    <div class="sidenav">
+        <h1 id = "dumbapp">
+            {{title}}
+        </h1>
+        <div class = "sidenavhead">
+            <p id = "sidenavfirst">DATASCIENCE </p>
+        </div>
+        <a href="/">Home</a>
+        <!-- <a href="/create">Create Model</a> -->
+        <a href="/selectpredict">Predict Result</a>
+    </div>
+    
+    <div class = "content">
+        <div>
+            <div class = 'mainheading'>
+                {{title}}
+            </div>
+        <div class = "centered">  
+            <form action="/inputpredictfile" method="post" class = {{cls}}>
+                <input type="file" name = "file" >
+                <input type="submit" value = "Upload">
+            </form>
+            
+            <form action="/predict", method="POST" class="{{classy}}" >
+                <!-- <input type="file" name = "file"> -->
+                <!-- <label for="attendance">Attendance</label><br>
+                <input type="text" id="attendance" name="Attendance" placeholder="Enter your attendance"><br>
+                <label for="mse">MSE:</label><br>
+                <input type="text" id="mse" name="mse" placeholder= "Enter your mid sem results"><br><br> -->
+                <input type="text" name = "features" class = "invisible" value = "{{features}}">
+                <input type="text" name = "modelname"  class = 'invisible' value = "{{modelname}}">
+                <br>
+                {% for i in features[:-1]%}
+                <label for="{{i}}">Enter {{i}}</label>
+                <input type="text", name = "{{i}}" class = "input-text" placeholder="Enter {{i}}">
+                <br>
+                {% endfor %}
+                <br>
+                <input type="submit" value = "Upload" >
+                <br>
+                
+            </form>
+            
+                <p>{{message}}</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
